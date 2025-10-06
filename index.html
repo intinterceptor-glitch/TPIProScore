@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Futebol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Análise de Futebol</h1>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Dados do Jogo</h2>
+            <div class="input-group">
+                <label for="timeCasa">Time da Casa:</label>
+                <input type="text" id="timeCasa" placeholder="Ex: Flamengo">
+            </div>
+            <div class="input-group">
+                <label for="timeFora">Time Visitante:</label>
+                <input type="text" id="timeFora" placeholder="Ex: Corinthians">
+            </div>
+
+            <h3>Adicionar Gols:</h3>
+            <div class="input-group">
+                <label for="minutoGol">Minuto:</label>
+                <input type="number" id="minutoGol" min="1" max="90">
+                <button id="addGolBtn">Adicionar</button>
+<h3>Adicionar Chutes ao Gol:</h3>
+<div class="input-group">
+    <label for="minutoChuteGol">Minuto:</label>
+    <input type="number" id="minutoChuteGol" min="1" max="90">
+    <button id="addChuteGolBtn">Adicionar</button>
+</div>
+
+<h3>Adicionar Chutes para Fora:</h3>
+<div class="input-group">
+    <label for="minutoChuteFora">Minuto:</label>
+    <input type="number" id="minutoChuteFora" min="1" max="90">
+    <button id="addChuteForaBtn">Adicionar</button>
+</div>
+
+<button id="resetBtn" style="background-color: #e74c3c; margin-top: 20px;">
+    Limpar Jogo e Reiniciar
+</button>
+            </div>          
+        </aside>
+        <main class="main-content">
+            <h2>Gráfico de Atividade</h2>
+            <div class="chart-container">
+                <canvas id="graficoSismico"></canvas>
+            </div>
+
+            <div class="results-box">
+                <p>Resultado:</p>
+                <p id="resultadoTexto">Aguardando dados...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
